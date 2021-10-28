@@ -15,4 +15,61 @@ public class Carro{
    }
 
 
+   //Set's
+   public void setNome(String nome){
+      this.nome = nome;
+   
+   }
+   
+   public void setAno(int ano){
+      this.ano = ano;
+   
+   }
+   
+   public void setValor(double valor){
+      this.valor = valor;
+   }
+   
+   public void setCor(String cor){
+   
+      this.cor = cor; 
+
+   }
+   
+   public void setNovo(boolean isNovo){
+   
+      this.isNovo = isNovo;
+   
+   }
+   
+   //Get's
+   
+   public String getNome(){
+   
+      return nome;
+   
+   }
+   
+   public int getAno(){
+   
+      return ano;
+   }
+   
+   
+   public double getValor(){
+   
+      return valor;
+   }
+   
+   public String getCor(){
+   
+      return cor;
+   }
+   
+   public boolean isNovo(){
+   
+      return isNovo;
+   
+   }
 }
+
