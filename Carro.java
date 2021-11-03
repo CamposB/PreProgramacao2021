@@ -3,10 +3,12 @@ public class Carro{
 
    //Atributos//
    private String nome;
+   private int IdCarro;
    private int ano;
    private double valor;
    private String cor;
    private boolean isNovo;
+   
 
    //Construtor   
    public Carro(String nome, int ano){
@@ -19,6 +21,11 @@ public class Carro{
    public void setNome(String nome){
       this.nome = nome;
    
+   }
+   
+   public void setIdCarro(int IdCarro){
+   
+      this.IdCarro = IdCarro;
    }
    
    public void setAno(int ano){
@@ -45,11 +52,11 @@ public class Carro{
    //Get's
    
    public String getNome(){
-   
       return nome;
-   
    }
-   
+   public int getIdCarro(){
+      return IdCarro;
+   }
    public int getAno(){
    
       return ano;
