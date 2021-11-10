@@ -11,6 +11,9 @@ public class Carro{
    
 
    //Construtor   
+   
+   public Carro(){}
+  
    public Carro(String nome, int ano){
       this.nome = nome;
       this.ano = ano;
@@ -19,6 +22,7 @@ public class Carro{
 
    //Set's
    public void setNome(String nome){
+      
       this.nome = nome;
    
    }
@@ -29,7 +33,15 @@ public class Carro{
    }
    
    public void setAno(int ano){
-      this.ano = ano;
+      
+      if(ano <= 1960){
+         this.ano = 0;
+      }else{
+         this.ano = ano;
+      
+      }
+      
+      
    
    }
    
