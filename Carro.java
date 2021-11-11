@@ -46,7 +46,12 @@ public class Carro{
    }
    
    public void setValor(double valor){
-      this.valor = valor;
+      if(valor >= 50000){
+         valor = valor - 2000;
+         this.valor = valor;
+      }else{
+        this.valor = valor;
+      }
    }
    
    public void setCor(String cor){
@@ -56,8 +61,13 @@ public class Carro{
    }
    
    public void setNovo(boolean isNovo){
-   
-      this.isNovo = isNovo;
+      if(isNovo){
+         this.isNovo = isNovo;
+      }else{
+         this.isNovo = isNovo;
+         valor = valor - 3000;
+      }
+      
    
    }
    
@@ -85,7 +95,7 @@ public class Carro{
       return cor;
    }
    
-   public boolean isNovo(){
+   public boolean getNovo(){
    
       return isNovo;
    
