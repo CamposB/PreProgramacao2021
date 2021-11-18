@@ -1,9 +1,10 @@
 import java.util.Random;
+import javax.swing.*;
 public class Loja{
 
    public static void main(String [] args){
       
-      //Recebdno Valores da classe carro
+      //Recebendo Valores da classe carro
       Random random = new Random();
       String nome = "Uno De Firma";
       int idCarro = random.nextInt(20);//Classe Random
@@ -13,9 +14,19 @@ public class Loja{
       boolean isNovo = true;
       String desconto = "";
       String desconto2 = "";
+      
+      //Recebendo valores da classe vendedor
+      
+      String nomeVendedor = "Carlos Jr.";
+      String email = JOptionPane.showInputDialog("Digite seu email");
+      String senha = JOptionPane.showInputDialog("Digite sua senha");
+      int re = 176338;
+      Boolean isAtivo = true;
+      
       //Instancia do objeto
       Carro carro = new Carro();
       Carro carro2 = new Carro();
+      Vendedor vendedor = new Vendedor();
       
       //Atribuição com metodos modificadores
       carro.setNome(nome);
@@ -29,14 +40,34 @@ public class Loja{
       carro2.setValor(200000.00);
       carro2.setNovo(true);
       
+      vendedor.setNome(nomeVendedor);
+      vendedor.setRe(re);
+      vendedor.setEmail(email);
+      vendedor.setSenha(senha);
+      vendedor.setIsAtivo(isAtivo);
+      
+      
+    
       if(!carro.getNovo()){
          desconto = " Pois recebeu 3 mil de desconto";
       }else if(valor >= 50000){
          desconto = " Pois recebeu 2 mil de desconto";
       
       }
-      System.out.println("O preço do " + carro.getNome() + " é " +carro.getValor() + desconto);
-      System.out.print("O preço do " + carro2.getNome() + " é " +carro2.getValor() + desconto2);
+      
+      System.out.println(vendedor.getEmail() + vendedor.getSenha());
+      
+      if((vendedor.getEmail().equals("carlosjr@gmail.com")) && (vendedor.getSenha().equals("12345"))){
+         System.out.println("O preço do " + carro.getNome() + " é " +carro.getValor() + desconto + " Foi vendido pelo vendedor: " + vendedor.getNome());
+         System.out.print("O preço do " + carro2.getNome() + " é " +carro2.getValor() + desconto2 + " Foi vendido pelo vendedor: " + vendedor.getNome());
+      
+      }else{
+         System.out.println("Esse vendedor não existe");
+      
+      }
+      
+      
+
    
    }
 
