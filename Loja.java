@@ -23,10 +23,20 @@ public class Loja{
       int re = 176338;
       Boolean isAtivo = true;
       
+      
+      // Recebendo a venda
+      int idVenda = random.nextInt(20);//Classe Random
+      int idVendedor = re;
+      int idCarroVenda = idCarro; 
+      int valorVenda = 20000;
+      String data = "21/11/2021";
+      
+      
       //Instancia do objeto
       Carro carro = new Carro();
       Carro carro2 = new Carro();
       Vendedor vendedor = new Vendedor();
+      Venda venda = new Venda();
       
       //Atribuição com metodos modificadores
       carro.setNome(nome);
@@ -46,7 +56,11 @@ public class Loja{
       vendedor.setSenha(senha);
       vendedor.setIsAtivo(isAtivo);
       
-      
+      venda.setIdVenda(idVenda);
+      venda.setIdVendedor(idVendedor);
+      venda.setIdCarro(idCarroVenda);
+      venda.setValor(valorVenda);
+      venda.setData(data);
     
       if(!carro.getNovo()){
          desconto = " Pois recebeu 3 mil de desconto";
@@ -59,7 +73,7 @@ public class Loja{
       
       if((vendedor.getEmail().equals("carlosjr@gmail.com")) && (vendedor.getSenha().equals("12345"))){
          System.out.println("O preço do " + carro.getNome() + " é " +carro.getValor() + desconto + " Foi vendido pelo vendedor: " + vendedor.getNome());
-         System.out.print("O preço do " + carro2.getNome() + " é " +carro2.getValor() + desconto2 + " Foi vendido pelo vendedor: " + vendedor.getNome());
+         System.out.print("O Carro " + carro2.getNome() + " foi vendido por " +venda.getValor() + " pelo vendedor: " + vendedor.getNome() + "No dia: " + venda.getData() + " ID de compra: " + venda.getIdVenda());
       
       }else{
          System.out.println("Esse vendedor não existe");

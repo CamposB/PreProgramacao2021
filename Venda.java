@@ -1,7 +1,7 @@
 public class Venda{
 
-private int IdVenda;
-private int IdVendedor;
+private int idVenda;
+private int idVendedor;
 private int IdCarro;
 private String data;
 private int valor; 
@@ -9,12 +9,12 @@ private int valor;
 //Setters
 
    public void setIdVenda(int idVenda){
-      this.IdVenda = idVenda;
+      this.idVenda = idVenda;
    }
    
-   public void setIdVendedor(int re){
+   public void setIdVendedor(int idVendedor){
    
-      idVendedor = re;
+      this.idVendedor = idVendedor;
    
    }
    
@@ -39,16 +39,16 @@ private int valor;
 
 //getters
 
-   public int getIdVanda(){
-      return IdVenda;
+   public int getIdVenda(){
+      return idVenda;
    }
    
    public int getIdVendedor(){
-      return IdVendedor;
+      return idVendedor;
    }
    
    public int getIdCarro(){
-    return IdCarro:
+    return IdCarro;
    }
    
    public String getData(){
