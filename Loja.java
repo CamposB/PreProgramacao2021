@@ -36,7 +36,10 @@ public class Loja{
       Carro carro = new Carro();
       Carro carro2 = new Carro();
       Vendedor vendedor = new Vendedor();
+      Vendedor vendedor2 = new Vendedor();
       Venda venda = new Venda();
+      Venda venda2 = new Venda();
+      
       
       //Atribuição com metodos modificadores
       carro.setNome(nome);
@@ -49,6 +52,7 @@ public class Loja{
       carro2.setNome("Mercedes AMG");
       carro2.setValor(200000.00);
       carro2.setNovo(true);
+      carro2.setIdCarro(235);
       
       vendedor.setNome(nomeVendedor);
       vendedor.setRe(re);
@@ -56,11 +60,23 @@ public class Loja{
       vendedor.setSenha(senha);
       vendedor.setIsAtivo(isAtivo);
       
+      vendedor2.setNome("Amaurir Sousa");
+      vendedor2.setRe(15334);
+      vendedor2.setEmail("amaurirsousa@gmail.com");
+      vendedor2.setSenha("12456");
+      vendedor2.setIsAtivo(true);
+      
       venda.setIdVenda(idVenda);
       venda.setIdVendedor(idVendedor);
       venda.setIdCarro(idCarroVenda);
       venda.setValor(valorVenda);
       venda.setData(data);
+      
+      venda2.setIdVenda(2);
+      venda2.setIdVendedor(15334);
+      venda2.setIdCarro(235);
+      venda2.setValor(200000);
+      venda2.setData("21/11/2021");
     
       if(!carro.getNovo()){
          desconto = " Pois recebeu 3 mil de desconto";
@@ -72,11 +88,13 @@ public class Loja{
       System.out.println(vendedor.getEmail() + vendedor.getSenha());
       
       if((vendedor.getEmail().equals("carlosjr@gmail.com")) && (vendedor.getSenha().equals("12345"))){
-         System.out.println("O preço do " + carro.getNome() + " é " +carro.getValor() + desconto + " Foi vendido pelo vendedor: " + vendedor.getNome());
-         System.out.print("O Carro " + carro2.getNome() + " foi vendido por " +venda.getValor() + " pelo vendedor: " + vendedor.getNome() + "No dia: " + venda.getData() + " ID de compra: " + venda.getIdVenda());
+         System.out.print("O Carro " + carro.getNome() + " foi vendido por " +venda.getValor() + " pelo vendedor: " + vendedor.getNome() + "No dia: " + venda.getData() + " ID de compra: " + venda.getIdVenda());
+
+      }else if((vendedor.getEmail().equals("amaurirsousa@gmail.com")) && (vendedor.getSenha().equals("12456"))){
+         System.out.print("O Carro " + carro2.getNome() + " foi vendido por " +venda2.getValor() + " pelo vendedor: " + vendedor2.getNome() + "No dia: " + venda2.getData() + " ID de compra: " + venda2.getIdVenda());
       
       }else{
-         System.out.println("Esse vendedor não existe");
+      
       
       }
       
